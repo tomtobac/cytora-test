@@ -1,0 +1,19 @@
+.Layout {
+	margin: 0 10%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 100px auto;
+	height: 100vh;
+}
+
+.Layout__header {
+	grid-column-start: span 5;
+}
+
+.Layout__content {
+	grid-column-start: span 3;
+}
+
+.Layout__fav {
+	grid-column-start: 4;
+}

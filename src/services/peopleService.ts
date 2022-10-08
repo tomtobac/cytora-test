@@ -1,12 +1,11 @@
-import { withPagination } from '../types/pagination';
-import { People } from '../types/people';
-import configure from './api';
+import { withPagination } from '@domain/pagination';
+import type { People } from '@domain/people';
+import api from './api';
 
 export async function getAllPeople(
 	params?: { [key: string]: any },
 	signal?: AbortSignal
 ) {
-	const api = await configure();
 	const response = await api.get<withPagination<People>>('/people', {
 		params,
 		signal,
@@ -15,7 +14,6 @@ export async function getAllPeople(
 }
 
 export async function getPeople(id: number, signal?: AbortSignal) {
-	const api = await configure();
 	const response = await api.get<People>('/people/' + id, { signal });
 	return response.data;
 }

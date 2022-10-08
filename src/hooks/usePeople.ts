@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { getPeople } from '../services/peopleService';
-import { People } from '../types/people';
+import axios from 'axios';
+import { getPeople } from '@services/peopleService';
+import { People } from '@domain/people';
 
 export function usePeople(id: number) {
 	const [character, setCharacter] = useState<People>();
 	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState(false);
 	const abortControllerRef = useRef<AbortController>();
 
 	async function fetchCharacter(id: number) {
@@ -13,8 +15,11 @@ export function usePeople(id: number) {
 			abortControllerRef.current = new AbortController();
 			const response = await getPeople(id, abortControllerRef.current.signal);
 			setCharacter(response);
-		} catch {
-			// @todo: handle error
+		} catch (err) {
+			if (!axios.isCancel(err)) {
+				console.log(err);
+				setError(true);
+			}
 		} finally {
 			setIsLoading(false);
 		}
@@ -24,5 +29,5 @@ export function usePeople(id: number) {
 		return () => abortControllerRef.current?.abort();
 	}, [id]);
 
-	return { character, isLoading };
+	return { character, isLoading, hasError: error };
 }

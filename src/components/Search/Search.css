@@ -1,0 +1,8 @@
+.Search {
+	display: flex;
+}
+
+.Search__input {
+	font-size: 24px;
+	padding: 4px 8px;
+}

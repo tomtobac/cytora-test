@@ -1,0 +1,12 @@
+.Planet__title {
+	display: flex;
+	align-items: center;
+}
+
+.Planet__Movie-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 0;
+}

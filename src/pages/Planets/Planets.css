@@ -1,0 +1,17 @@
+.Planets__title {
+	font-family: 'SF Distant Galaxy';
+	letter-spacing: 4px;
+}
+
+.Planets__list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 0;
+}
+
+.Planets__list-item {
+	display: flex;
+	padding: 8px 12px;
+}

@@ -1,0 +1,5 @@
+.LikeableItem {
+	display: flex;
+	justify-items: center;
+	gap: 8px;
+}

@@ -1,0 +1,12 @@
+.Character__title {
+	display: flex;
+	align-items: center;
+}
+
+.Character__Movie-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 0;
+}

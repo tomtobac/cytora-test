@@ -1,0 +1,17 @@
+.People__title {
+	font-family: 'SF Distant Galaxy';
+	letter-spacing: 4px;
+}
+
+.People__list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 0;
+}
+
+.People__list-item {
+	display: flex;
+	padding: 8px 12px;
+}

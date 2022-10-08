@@ -1,0 +1,22 @@
+.Pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.Pagination__button {
+	background: inherit;
+	padding: 8px 12px;
+	border-width: 0;
+	cursor: pointer;
+}
+
+.Pagination__button:disabled {
+	cursor: not-allowed;
+}
+
+.Pagination__divider {
+	font-family: 'SF Distant Galaxy Symbols';
+	font-size: 2rem;
+}

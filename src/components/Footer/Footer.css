@@ -1,0 +1,13 @@
+.Footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+.Footer__rebel {
+	font-family: 'SF Distant Galaxy Symbols';
+	font-size: 1.5rem;
+	margin-right: 0.1rem;
+}

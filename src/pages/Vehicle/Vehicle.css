@@ -1,0 +1,12 @@
+.Vehicle__title {
+	display: flex;
+	align-items: center;
+}
+
+.Vehicle__Movie-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 0;
+}
