@@ -32,10 +32,12 @@ tbd
 
 ### 📸 Screenshots
 
-|                                             |                                             |
-| ------------------------------------------- | ------------------------------------------- |
-| !["Fail to load"](./img/failed-to-load.png) | !["Initial State"](./img/initial-state.png) |
-| !["Half done"](./img/checked.png)           | !["Ready to submit"](./img/done.png)        |
+|                                               |                                               |
+| --------------------------------------------- | --------------------------------------------- |
+| !["People view"](./img/main.png)              | !["Pagination"](./img/pagination.png)         |
+| !["Searching"](./img/search.png)              | !["Add favourites"](./img/add_favourites.png) |
+| !["Planets view"](./img/planets.png)          | !["Vehicles view"](./img/vehicles.png)        |
+| !["Error handling"](./img/error_handling.png) | !["404"](./img/404.png)                       |
 
 ### 🖊 Improvments
 
