@@ -15,9 +15,9 @@ export const Header = () => {
   }, []);
   return (
     <header className="Header ">
-      <h1 className="Header__logo glitch">
+      <h1 className="Header__logo">
         <Link to="/">
-          <img src={logo} width="128" />
+          <img src={logo} width="128" className="glitch" />
         </Link>
       </h1>
       <nav className="Header__menu">
@@ -26,6 +26,7 @@ export const Header = () => {
             <li key={page} className="Header__menu-item">
               <NavLink
                 to={page}
+                title={page}
                 className={(props) =>
                   cs({ "Header__menu-item--is-active": props.isActive })
                 }

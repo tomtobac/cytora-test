@@ -1,12 +1,12 @@
 .Heart {
-	fill: none;
-	stroke: #8899a4;
-	stroke-width: 2px;
-	stroke-linecap: round;
-	stroke-linejoin: round;
+  fill: none;
+  stroke: var(--heart-color);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .Heart--filled {
-	fill: #8899a4;
-	opacity: 0.7;
+  fill: var(--heart-color);
+  opacity: 0.7;
 }

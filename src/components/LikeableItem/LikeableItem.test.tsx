@@ -1,5 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { Mock, vi } from "vitest";
+import { Mock, Mocked, vi } from "vitest";
+import userEvent from "@testing-library/user-event";
 import { WithMemoryRouting } from "@test/utils";
 import { useFavourite } from "@hooks/useFavourite";
 import { LikeableItem } from "./";
@@ -24,7 +25,6 @@ describe("LikeableItem", () => {
     expect(screen.getByTitle("Heart Icon")).not.toHaveClass("Heart--filled");
   });
   it("should render a filled heart icon", () => {
-    console.log(useFavourite.prototype);
     (useFavourite as Mock).mockImplementation(() => ({
       isLiked: true,
       onToggleLike: vi.fn(),
@@ -35,5 +35,20 @@ describe("LikeableItem", () => {
       </WithMemoryRouting>
     );
     expect(screen.getByTitle("Heart Icon")).not.toHaveClass("Heart--filled");
+  });
+  it("should trigger onToggleLike when Heart is clicked", async () => {
+    const user = userEvent.setup();
+    const onToggleLike = vi.fn();
+    (useFavourite as Mock).mockImplementation(() => ({
+      isLiked: true,
+      onToggleLike,
+    }));
+    render(
+      <WithMemoryRouting>
+        <LikeableItem name="test" to="/test" />
+      </WithMemoryRouting>
+    );
+    user.click(screen.getByRole("button"));
+    await waitFor(() => expect(onToggleLike).toBeCalled());
   });
 });

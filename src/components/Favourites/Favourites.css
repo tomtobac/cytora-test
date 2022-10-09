@@ -1,18 +1,18 @@
 .Favourite__title {
-	font-family: 'SF Distant Galaxy';
-	letter-spacing: 4px;
+  font-family: "SF Distant Galaxy";
+  letter-spacing: 4px;
 }
 
 .Favourite__list {
-	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 2rem;
-	padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0;
 }
 
 .Favourite__list-item {
-	border: 1px dashed tomato;
-	display: flex;
-	padding: 8px 12px;
+  border: 1px dashed var(--highlight-color);
+  display: flex;
+  padding: 8px 12px;
 }

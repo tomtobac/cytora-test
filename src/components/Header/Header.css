@@ -1,34 +1,34 @@
 .Header {
-	display: flex;
-	align-items: center;
-	align-items: center;
-	gap: 12px;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
 }
 
 .Header__logo {
-	margin: 0;
-	width: 128px;
-	object-fit: cover;
+  margin: 0;
+  width: 128px;
+  object-fit: cover;
 }
 
 .Header__menu {
-	flex-grow: 2;
+  flex-grow: 2;
 }
 
 .Header__menu ul {
-	list-style: none;
-	display: flex;
-	justify-content: flex-start;
-	gap: 24px;
-	padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 0;
 }
 
 .Header__menu-item {
-	font-style: italic;
+  font-style: italic;
 }
 
 .Header__menu-item--is-active {
-	padding-bottom: 3px;
-	border-bottom: 2px solid tomato;
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--highlight-color);
 }
