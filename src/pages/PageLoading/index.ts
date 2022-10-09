@@ -1,1 +1,1 @@
-export { PageLoading } from './PageLoading';
+export { PageLoading } from "./PageLoading";

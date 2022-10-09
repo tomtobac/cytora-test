@@ -1,1 +1,1 @@
-export { LikeableItem } from './LikeableItem';
+export { LikeableItem } from "./LikeableItem";

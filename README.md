@@ -18,7 +18,10 @@ $ npm run dev
 
 ### 🧠 Quick notes
 
-tbd
+I decided to use [React](https://reactjs.org/) since I feel comfortable with it. For state management I believe this could be accomplished with in-build tools like `React.Context` but for the sake of learning I wanted to test out [Zustand](https://github.com/pmndrs/zustand) and I was impressed with how well it works and easy it is to setup. I didn't want to mess up with any CSS framework, even tho I like TailwindCSS I thought it was overkilling for just a few classes I wanted to use.
+The most challenging in the project was caching requests, even if I used [React Query](https://tanstack.com/query/v4/docs/overview) in the past it was always revalidating data so I had to search for something else, after finding out about this cache adapter it was good enough for this example. In the Technical specification, it says "client-side caching (LRU) of request" which usually means to have a "capacity" of caching, and since it is not defined I decided that it was good enough.
+I spent one and a half days on it, primarily handling styling since I do not have a real design in mind and I thought to move stuff all time around.
+As you can check in the #Improvements section there is plenty of improvements, fixes, and features to implement if I could dedicate even more time. I would like to mention that testing is really important to me and I would like to have tested much more but I didn't want to invest a week in a code challenge.
 
 ### 🛠 Tools
 
@@ -39,7 +42,7 @@ tbd
 | !["Planets view"](./img/planets.png)          | !["Vehicles view"](./img/vehicles.png)        |
 | !["Error handling"](./img/error_handling.png) | !["404"](./img/404.png)                       |
 
-### 🖊 Improvments
+### 🖊 Improvements
 
 - reliability: e2e + unit testing
 - refactor: every list view is quite similar, even the hooks. Try to abstract it to reduce loc.

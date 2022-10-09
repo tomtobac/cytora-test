@@ -1,1 +1,1 @@
-export { People } from './People';
+export { People } from "./People";

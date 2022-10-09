@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'url';
@@ -14,7 +17,14 @@ export default defineConfig({
 			'@domain': fileURLToPath(new URL('./src/domain', import.meta.url)),
 			'@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
 			'@services': fileURLToPath(new URL('./src/services', import.meta.url)),
+			'@test': fileURLToPath(new URL('./src/test', import.meta.url)),
 		},
 	},
 	plugins: [react()],
+	test: {
+		globals: true,
+		environment: 'jsdom',
+		setupFiles: './src/setupTests.ts',
+		clearMocks: true,
+	},
 });

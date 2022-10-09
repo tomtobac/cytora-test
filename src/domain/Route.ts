@@ -1,5 +1,5 @@
 export enum Route {
-	'People' = '/people',
-	'Planets' = '/planets',
-	'Vehicles' = '/vehicles',
+  "People" = "/people",
+  "Planets" = "/planets",
+  "Vehicles" = "/vehicles",
 }

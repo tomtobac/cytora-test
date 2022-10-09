@@ -1,5 +1,5 @@
-import './Loading.css';
+import "./Loading.css";
 
 export const Loading = () => {
-	return <div className="Loading" />;
+  return <div className="Loading" />;
 };

@@ -1,1 +1,1 @@
-export { Resident } from './Resident';
+export { Resident } from "./Resident";
